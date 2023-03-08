@@ -1,10 +1,21 @@
-*{
+* {
     margin: 0px;
     font-family: sans-serif;
     font-weight: bold;
 }
 
-.phone{
+body{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    overflow-x: hidden;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: auto;
+    }
+}
+
+.phone {
     margin: -50px 10vw !important;
     padding: 20px;
     width: 350px;
@@ -14,8 +25,12 @@
     background-color: white;
     box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.349);
     scale: 0.8;
- 
-    .borderCima{
+
+    @media (max-width: 500px) {
+        margin: 0px 0px 0px -20px !important;
+    }
+
+    .borderCima {
         height: 100px;
         width: 60%;
         border-radius: 30px;
@@ -25,7 +40,7 @@
         left: 80px;
     }
 
-    header{
+    header {
         background-image: linear-gradient(90deg, purple, rgb(253, 122, 253));
         border-radius: 20px 20px 5px 5px;
         display: flex;
@@ -34,7 +49,7 @@
         height: 80px;
         padding: 20px;
 
-        p{
+        p {
             color: white;
             font-weight: bold;
             padding: 5px 10px;
@@ -43,18 +58,19 @@
             transform: rotateZ(90deg);
         }
 
-        img{
+        img {
             width: 50px;
             border-radius: 50%;
+            border: solid white;
         }
 
-        div{
-            h1{
+        div {
+            h1 {
                 color: white;
                 font-size: 20px;
             }
 
-            p{
+            p {
                 color: white;
                 opacity: 0.5;
                 transform: rotateZ(0deg);
@@ -63,10 +79,10 @@
         }
     }
 
-    main{
+    main {
         padding: 10px 0px;
 
-        .other{
+        .other {
             background-color: rgba(128, 0, 128, 0.137);
             color: purple;
             margin-right: 100px;
@@ -74,31 +90,31 @@
             border-radius: 10px 10px 10px 0px;
         }
 
-        .you{
+        .you {
             box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.274);
             margin-left: 100px;
             margin-bottom: 15px;
             border-radius: 10px 10px 0px 10px;
         }
 
-        .img{
+        .img {
             box-shadow: none;
             display: flex;
             gap: 5px;
             justify-content: flex-end;
         }
 
-        div{
+        div {
             padding: 5px;
             font-size: 15px;
 
-            img{
+            img {
                 width: 70px;
                 border-radius: 15px;
             }
         }
 
-        .price{
+        .price {
             background-image: linear-gradient(90deg, rgb(253, 122, 253), purple);
             margin-right: 100px;
             margin-bottom: 15px;
@@ -109,26 +125,26 @@
             align-items: center;
             justify-content: space-between;
 
-            .circle{
+            .circle {
                 width: 20px;
                 height: 20px;
                 border: solid;
                 border-radius: 50%;
             }
 
-            span{
+            span {
                 font-size: 20px;
             }
         }
 
-        input{
+        input {
             border: none;
             outline: none;
             width: 84%;
             font-size: 15px;
         }
 
-        button{
+        button {
             background-color: rgb(85, 2, 85);
             border: none;
             padding: 5px 15px;
@@ -140,12 +156,47 @@
     }
 }
 
-.box{
+.box {
     width: 500px;
     height: 1000px;
     border-radius: 250px;
     background-color: purple;
     position: absolute;
     top: -350px;
+    left: -50px;
+
+}
+
+.text {
+    width: 80%;
+    margin: 20% 50% 0 0;
     
+    @media (max-width: 1000px) {
+        margin: 50px 0px 20px 20px;
+        
+        h1{
+            font-size: 10vw !important;
+        }
+
+        h2{
+            text-align: center;
+        }
+    }
+
+    h1{
+        color: purple;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    h2{
+        opacity: 0.3;
+        font-size: 20px;
+        width: 100%;
+    }
+}
+
+.attribution{
+    padding: 10px;
+    border-top: solid rgba(128, 0, 128, 0.219);
 }
